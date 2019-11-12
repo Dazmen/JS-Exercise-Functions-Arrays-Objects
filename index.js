@@ -190,9 +190,9 @@ function getCarInfoById(inv, id) {
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
 function sortCarInventory(inventory) {
-  inventory.sort(function(a, b){
-    var nameA = a.car_model;
-    var nameB = b.car_model;
+   return inventory.sort(function(a, b){
+    var nameA = a.car_model.toUpperCase();
+    var nameB = b.car_model.toUpperCase();
     if(nameA < nameB) {
       return -1;
     }
